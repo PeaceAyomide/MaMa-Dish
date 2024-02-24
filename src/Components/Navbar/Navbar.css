@@ -1,0 +1,178 @@
+
+
+
+
+
+
+.navigation{
+    position: relative;
+    height: 70px;
+    display: none;
+    border-radius: 1px;
+    background: #023047; 
+}
+
+.navigation ul{
+    display: flex;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    
+}
+
+.navigation ul li a{
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width: 100%;   
+ text-align: center;
+ font-weight: 500;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+color: white;
+}
+
+.navigation ul li.active a .icon{
+    transform: translateY(-35px);
+    color: black;
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    color: white;
+font-weight: 400;
+font-size: 0.75em;
+letter-spacing: 0.05em;
+transition: 0.5s ease-in-out;
+opacity: 0;
+}
+
+.navigation ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator{
+    position: absolute;
+    top: -50px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #ffb703;
+    border: 6px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(63px * 2));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(68px * 3));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(71px * 4));
+}
+
+@media screen and (max-width: 400px) {
+    .navigation{
+        display: block;
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+    }
+
+
+
+
+    .navigation ul li:nth-child(1){
+        position: relative;
+        left: 10px;
+    } 
+
+    .navigation ul li:nth-child(2){
+        position: relative;
+        left: 36px;
+    } 
+
+    .navigation ul li:nth-child(3){
+        position: relative;
+        left: 60px;
+    } 
+
+    .navigation ul li:nth-child(4){
+        position: relative;
+        left: 90px;
+    } 
+
+    .navigation ul li:nth-child(1).active ~ .indicator{
+        transform: translateX(calc(5px * 2));
+    }
+    .navigation ul li:nth-child(2).active ~ .indicator{
+        transform: translateX(calc(53px * 2));
+    }
+    .navigation ul li:nth-child(3).active ~ .indicator{
+        transform: translateX(calc(67px * 3));
+    }
+    
+    .navigation ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(74px * 4));
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+    .navigation ul li:nth-child(4){
+        position: relative;
+        left: 70px;
+    } 
+
+    .navigation ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(70px * 4));
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .navigation ul li:nth-child(2){
+        position: relative;
+        left: 13px;
+    } 
+
+    .navigation ul li:nth-child(3){
+        position: relative;
+        left: 15px;
+    } 
+
+    .navigation ul li:nth-child(4){
+        position: relative;
+        left: 19px;
+    } 
+
+    .navigation ul li:nth-child(2).active ~ .indicator{
+        transform: translateX(calc(42px * 2));
+    }
+    .navigation ul li:nth-child(3).active ~ .indicator{
+        transform: translateX(calc(52px * 3));
+    }
+    
+    .navigation ul li:nth-child(4).active ~ .indicator{
+        transform: translateX(calc(57px * 4));
+    }
+}
