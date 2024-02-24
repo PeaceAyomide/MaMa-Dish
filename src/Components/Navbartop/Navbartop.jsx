@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbartop.css'
 import MAMALOGO from '../Navbartop/mamalogo.png'
 import { MdOutlineShoppingCart } from "react-icons/md";
-
+import { Link } from 'react-router-dom';
 const Navbartop = () => {
 
     const [activeTab, setActiveTab] = useState('Home');
@@ -21,25 +21,34 @@ const Navbartop = () => {
 
           <div className="navlist">
               <ul>
-                  <li>
+                      <li>
+                          <Link to="/">
+                          
                       <a href="#" className={activeTab === 'Home' ? 'active' : ''} onClick={() => handleTabClick('Home')}>
                       Home
-                      </a>     
+                              </a>
+                              </Link>        
                   </li>
-                  <li>
+                      <li>
+                      <Link to="/dishes">
                       <a href="#" className={activeTab === 'Dishes' ? 'active' : ''} onClick={() => handleTabClick('Dishes')}>
                       Dishes
-                      </a>     
+                              </a>     
+                              </Link>
                   </li>
-                  <li>
+                      <li>
+                      <Link to="/about">
                       <a href="#" className={activeTab === 'About' ? 'active' : ''} onClick={() => handleTabClick('About')}>
                       About Us
-                      </a>     
+                              </a>     
+                              </Link>
                   </li>
-                  <li>
+                      <li>
+                      <Link to="/contact">
                       <a href="#" className={activeTab === 'Contact' ? 'active' : ''} onClick={() => handleTabClick('Contact')}>
                       Contact
-                      </a>     
+                              </a>     
+                              </Link>
                   </li>
                   <li>
                       <a href="#">
@@ -54,7 +63,7 @@ const Navbartop = () => {
               
                   </ul>
                   <div className={`pointer ${activeTab === 'Home' ? 'pointer-home' : activeTab === 'Dishes' ? 'pointer-dishes' : activeTab === 'About' ? 'pointer-about': activeTab === 'Contact' ? 'pointer-contact' : ''}`}></div>
-                
+                <div className="cart2"><MdOutlineShoppingCart/></div>
           </div>
     
           </div>
