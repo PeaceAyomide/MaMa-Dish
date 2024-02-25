@@ -57,7 +57,7 @@ const Navbartop = () => {
                   </li>
                   <li>
                       <a href="#">
-              <button>Order now</button>
+              <button>Booking Now</button>
                           </a>     
                   </li>
               
