@@ -1,0 +1,68 @@
+.contctbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+  padding-bottom: 15rem;
+   padding-top: 3.5rem;
+ 
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.8rem;
+gap: 0.5rem;
+}
+.clockicon{
+   
+    color: orange;
+    font-size: 2rem;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8rem;
+    gap: 0.5rem;
+}
+.locationicon{
+    color: orange;
+    font-size: 2rem;
+}
+
+.phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8rem;
+    gap: 0.5rem;
+}
+
+.phoneicon{
+    color: orange;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .contctbtn{
+        gap: 5rem;
+    }   
+}
+
+@media screen and (max-width: 500px) {
+.contctbtn{
+    flex-direction: column;
+}
+.clockicon, .locationicon, .phoneicon{
+    font-size: 1.5rem;
+}
+
+.clock h4, .location h4, .phoneicon h4 {
+    font-size: 0.8rem;
+}
+}
