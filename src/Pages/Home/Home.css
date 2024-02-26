@@ -40,6 +40,17 @@
     }
 
 
+
+
+    @media only screen and (max-width: 1010px) {
+
+        .contentfood{
+            padding-top:6rem;
+            padding-left: 2em;
+            }
+    }
+    
+
     @media screen and (max-width: 800px) {
 
         .headingwrite{

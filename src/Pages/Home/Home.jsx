@@ -3,6 +3,8 @@ import HomeDish from '../Home/HomeDish.png'
 import { FaArrowRight } from "react-icons/fa";
 import "./Home.css"
 import Contacthome from './homecontact/homecontact';
+import Hometwo from './Hometwo/Hometwo';
+
 
 const Home = () => {
   return (
@@ -24,7 +26,8 @@ const Home = () => {
         </div>
         
       </div>
-  <Contacthome/>
+      <Contacthome />
+      <Hometwo/>
       </div>
       )
 }
