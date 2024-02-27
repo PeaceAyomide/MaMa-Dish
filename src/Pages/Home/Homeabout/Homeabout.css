@@ -1,0 +1,92 @@
+.Habout{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-bottom: 8rem;
+    
+}
+
+.Hcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+gap: 1rem;
+}
+
+.Hcontent p{
+    text-align: center;
+}
+
+.Hbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.Hboxz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+max-width: 14rem;
+overflow: hidden;   
+padding: 2rem;
+padding-top: 4rem;
+padding-bottom: 3rem;
+gap: 3rem;
+border-radius: 1.9rem;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.Hicon{
+    font-size: 4rem;
+    color: #fd9e0c;
+}
+
+.Hboxz p{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1010px) {
+    .Hbox{
+        flex-direction: column;
+    }
+    .Hbox p{
+        font-size: 0.8rem;
+    }
+.Hicon{
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .Habout h1{
+        font-size: 1.5rem;
+    }
+    .Habout p{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .Habout h1{
+        font-size: 1.3rem;
+    }
+    
+
+
+    .Habout p{
+        font-size: 0.7rem;
+    }
+ .Hbox{
+    padding-top: 3rem;
+ }
+
+}
+}

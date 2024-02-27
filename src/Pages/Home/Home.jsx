@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import "./Home.css"
 import Contacthome from './homecontact/homecontact';
 import Hometwo from './Hometwo/Hometwo';
+import Homeabout from './Homeabout/Homeabout';
 
 
 const Home = () => {
@@ -27,7 +28,8 @@ const Home = () => {
         
       </div>
       <Contacthome />
-      <Hometwo/>
+      <Hometwo />
+      <Homeabout/>
       </div>
       )
 }
