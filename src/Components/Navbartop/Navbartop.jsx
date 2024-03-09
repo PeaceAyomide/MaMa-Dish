@@ -3,7 +3,7 @@ import './Navbartop.css'
 import MAMALOGO from '../Navbartop/mamalogo.png'
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
-const Navbartop = () => {
+const Navbartop = ({ handlebutton, cartfoodItems }) => {
 
     const [activeTab, setActiveTab] = useState('Home');
 
@@ -12,6 +12,8 @@ const Navbartop = () => {
         setActiveTab(tab);
     };
 
+
+    
   return (
       <nav>
           <div className="navyz">
@@ -50,11 +52,15 @@ const Navbartop = () => {
                               </a>     
                               </Link>
                   </li>
-                  <li>
-                      <a href="#">
-                     <MdOutlineShoppingCart className='cart'/>
+                      <li>
+                          <Link> 
+                          <a href="#">
+                     <MdOutlineShoppingCart className='cart' onClick={handlebutton}/>
+                        <span className='span'> {cartfoodItems.length === 0 ? "" : cartfoodItems.length}</span>
                           </a>     
-                  </li>
+                     
+                          </Link>
+                       </li>
                   <li>
                       <a href="#">
               <button>Booking Now</button>
@@ -63,8 +69,9 @@ const Navbartop = () => {
               
                   </ul>
                   <div className={`pointer ${activeTab === 'Home' ? 'pointer-home' : activeTab === 'Dishes' ? 'pointer-dishes' : activeTab === 'About' ? 'pointer-about': activeTab === 'Contact' ? 'pointer-contact' : ''}`}></div>
-                <div className="cart2"><MdOutlineShoppingCart/></div>
-          </div>
+                <div className="cart2"><MdOutlineShoppingCart onClick={handlebutton}/></div>
+                <span className='span2'> {cartfoodItems.length === 0 ? "" : cartfoodItems.length}</span>
+              </div>
     
           </div>
               </nav>

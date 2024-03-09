@@ -1,0 +1,87 @@
+.foodcontainer{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+padding-bottom: 11rem;
+gap: 5rem;
+
+}
+
+
+.foodcontainer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blackcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3rem;
+    width: 13rem;
+    height: 19rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.foodimg2 img{
+    width: 8rem;
+    height: 7rem;
+    
+}
+
+.pricefood{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pricefood .foodwrite{
+    text-align: center;
+    }
+
+
+.btnfood{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btnfood button{
+    border: 0px;
+    border-radius: 1rem;
+    color: white;
+    background-color: black;
+height: 2.5rem;
+width: 5.5rem; 
+cursor: pointer;
+transition: .3s ease-in-out;
+}
+
+.btnfood button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 1010px){
+    .foodcontainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+      
+        padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 830px){
+
+    .foodcontainer{
+        padding-top: 0;
+    }
+
+}
