@@ -1,9 +1,9 @@
 .foodcontainer{
     display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
-padding-bottom: 11rem;
+padding-bottom: 14rem;
 gap: 5rem;
-
+padding-top: 1rem;
 }
 
 
@@ -74,14 +74,34 @@ transition: .3s ease-in-out;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
       
-        padding-top: 4rem;
+        padding-top: 3.7rem;
+        margin-top: -3rem;
+        
     }
 }
 
-@media only screen and (max-width: 830px){
+
+@media only screen and (max-width: 834px){
 
     .foodcontainer{
-        padding-top: 0;
+        margin-top: -2.6rem;
+      }
+
+}
+
+@media only screen and (max-width: 600px){
+    .foodcontainer{
+        margin-top: -1rem;
     }
+
+    
+}
+
+@media only screen and (max-width: 500px){
+
+    .foodcontainer{
+        margin-top: -3rem;
+      }
+
 
 }

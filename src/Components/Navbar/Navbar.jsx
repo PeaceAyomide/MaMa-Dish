@@ -44,7 +44,7 @@ const Navbar = () => {
                         <Link to="/about">
                         <a href="#" onClick={() => handleClick('About Us')}>
                      <span className='icon'><GiCook /></span> 
-                     <span className='text'>About Us</span> 
+                     <span className='text'>Review</span> 
                   </a>
                         </Link> 
               </li>

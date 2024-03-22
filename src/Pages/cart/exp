@@ -1,0 +1,34 @@
+
+@media only screen and (max-width: 1010px)
+{
+    .cartdisplay{
+        padding-bottom: 90rem;
+        background-color: red;
+        
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+    .cartdisplay{
+        padding-bottom: 65rem;
+    background-color: blue;    
+    }
+
+    .cartdisplay2{
+        height: 17rem;
+        width: 35rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .cartdisplay2{
+        height: 14rem;
+        width: 20rem;
+    }
+    .cartdisplay{
+        padding-bottom: 88rem;
+        min-height: 307vh;
+        background-color: yellow;
+    }
+}

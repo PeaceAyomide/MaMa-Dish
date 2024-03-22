@@ -1,12 +1,16 @@
 nav{
     height: 25vh;
-
+position: sticky;
+top: 0;
+background-color: white;
+z-index: 999;
 }
 
 .navyz{
     display: flex;    
 justify-content: center;
 align-items: center;
+
 }
 
 .logoimg img{
@@ -116,6 +120,7 @@ color: white;
     }
 
     .logoimg img{
+        max-height:5rem ;
         margin-right: 70px;
     }
 
@@ -195,3 +200,6 @@ color: white;
             display: none;
         }
     }
+
+
+  

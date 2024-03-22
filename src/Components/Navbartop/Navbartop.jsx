@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbartop.css'
-import MAMALOGO from '../Navbartop/mamalogo.png'
+import MAMALOGO from '../Navbartop/mamalogo2.png'
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
 const Navbartop = ({ handlebutton, cartfoodItems }) => {
 
-    const [activeTab, setActiveTab] = useState('Home');
+    const [activeTab, setActiveTab] = useState(localStorage.getItem('activeTab') || 'Home');
+    
+    useEffect(() => {
+        // Store activeTab in localStorage when it changes
+        localStorage.setItem('activeTab', activeTab);
+    }, [activeTab]);
 
 
     const handleTabClick = (tab) => {
@@ -41,7 +46,7 @@ const Navbartop = ({ handlebutton, cartfoodItems }) => {
                       <li>
                       <Link to="/about">
                       <a href="#" className={activeTab === 'About' ? 'active' : ''} onClick={() => handleTabClick('About')}>
-                      About Us
+                      Review Us
                               </a>     
                               </Link>
                   </li>

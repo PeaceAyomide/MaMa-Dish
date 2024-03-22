@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import Navbartop from './Components/Navbartop/Navbartop';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Dishes from './Pages/Dish/Dishes';
-import AboutUs from './Pages/AboutUs';
+import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact';
 import Cart from './Pages/cart/cart';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,6 +13,7 @@ const App = () => {
 
 const [closeCart, setCartopen] = useState(false)
 
+  
 
 const handlebutton = () => {
   setCartopen(true)
@@ -25,8 +26,14 @@ const handlebutton = () => {
 
   //data
   const { foodItems } = data;
-  const [cartfoodItems, setcartfoodItems] = useState([]);
+  const [cartfoodItems, setcartfoodItems] = useState(JSON.parse(localStorage.getItem('cartfoodItems')) || []);
 
+  useEffect(() => {
+    localStorage.setItem('cartfoodItems', JSON.stringify(cartfoodItems));
+}, [cartfoodItems]);
+
+
+  
   const handleAddProduct = (food) => {
     const FoodExist = cartfoodItems.find((item) => item.id === food.id)
     if (FoodExist) {
