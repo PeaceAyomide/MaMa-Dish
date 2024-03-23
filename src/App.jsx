@@ -8,8 +8,16 @@ import Contact from './Pages/Contact/Contact';
 import Cart from './Pages/cart/cart';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import data from './Pages/Dish/data';
+import Loader from './Components/Loader/Loader';
 
 const App = () => {
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false); // Hide loader after 8 seconds
+    }, 8000);
+  }, []);
 
 const [closeCart, setCartopen] = useState(false)
 
@@ -65,6 +73,9 @@ const handlebutton = () => {
 
   return (
     <Router>
+      {isLoading ? ( // If loading, display loader
+        <Loader />
+      ) : (
       <div>
         <Navbar handlebutton={ handlebutton}/>
         <Navbartop handlebutton={ handlebutton}  cartfoodItems={cartfoodItems}/>
@@ -77,7 +88,8 @@ const handlebutton = () => {
           <Route path="/dishes" element={<Dishes foodItems={foodItems} handleAddProduct={handleAddProduct} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+          </div>
+           )}
     </Router>
   );
 };
