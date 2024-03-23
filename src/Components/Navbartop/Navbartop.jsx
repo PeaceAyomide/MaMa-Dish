@@ -31,35 +31,35 @@ const Navbartop = ({ handlebutton, cartfoodItems }) => {
                       <li>
                           <Link to="/">
                           
-                      <a href="#" className={activeTab === 'Home' ? 'active' : ''} onClick={() => handleTabClick('Home')}>
+                      <a href="" className={activeTab === 'Home' ? 'active' : ''} onClick={() => handleTabClick('Home')}>
                       Home
                               </a>
                               </Link>        
                   </li>
                       <li>
                       <Link to="/dishes">
-                      <a href="#" className={activeTab === 'Dishes' ? 'active' : ''} onClick={() => handleTabClick('Dishes')}>
+                      <a href="" className={activeTab === 'Dishes' ? 'active' : ''} onClick={() => handleTabClick('Dishes')}>
                       Dishes
                               </a>     
                               </Link>
                   </li>
                       <li>
                       <Link to="/about">
-                      <a href="#" className={activeTab === 'About' ? 'active' : ''} onClick={() => handleTabClick('About')}>
+                      <a href="" className={activeTab === 'About' ? 'active' : ''} onClick={() => handleTabClick('About')}>
                       Review Us
                               </a>     
                               </Link>
                   </li>
                       <li>
                       <Link to="/contact">
-                      <a href="#" className={activeTab === 'Contact' ? 'active' : ''} onClick={() => handleTabClick('Contact')}>
+                      <a href="" className={activeTab === 'Contact' ? 'active' : ''} onClick={() => handleTabClick('Contact')}>
                       Contact
                               </a>     
                               </Link>
                   </li>
                       <li>
                           <Link> 
-                          <a href="#">
+                          <a href="">
                      <MdOutlineShoppingCart className='cart' onClick={handlebutton}/>
                         <span className='span'> {cartfoodItems.length === 0 ? "" : cartfoodItems.length}</span>
                           </a>     
@@ -67,7 +67,7 @@ const Navbartop = ({ handlebutton, cartfoodItems }) => {
                           </Link>
                        </li>
                   <li>
-                      <a href="#">
+                      <a href="">
               <button>Booking Now</button>
                           </a>     
                   </li>
