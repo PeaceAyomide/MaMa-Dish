@@ -31,7 +31,7 @@ const Navbar = () => {
           <ul>
               <li className={`list ${activeItem === 'Home' ? 'active' : ''}`}>
                         <Link to="/">
-                        <a href="#" onClick={() => handleClick('Home')}>
+                        <a href="" onClick={() => handleClick('Home')}>
                      <span className='icon'><IoHomeOutline /></span> 
                      <span className='text'>Home</span> 
                   </a>
@@ -40,7 +40,7 @@ const Navbar = () => {
               </li>
               <li className={`list ${activeItem === 'Dishes' ? 'active' : ''}`}>
                         <Link to="/dishes">
-                        <a href="#" onClick={() => handleClick('Dishes')}>
+                        <a href="" onClick={() => handleClick('Dishes')}>
                      <span className='icon'><GiCookingPot /></span> 
                      <span className='text'>Dishes</span> 
                   </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
               </li>
               <li className={`list ${activeItem === 'About Us' ? 'active' : ''}`}>
                         <Link to="/about">
-                        <a href="#" onClick={() => handleClick('About Us')}>
+                        <a href="" onClick={() => handleClick('About Us')}>
                      <span className='icon'><GiCook /></span> 
                      <span className='text'>Review</span> 
                   </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
               </li>
               <li className={`list ${activeItem === 'Contact' ? 'active' : ''}`} >
                         <Link to="/contact">
-                        <a href="#" onClick={() => handleClick('Contact')}>
+                        <a href="" onClick={() => handleClick('Contact')}>
                      <span className='icon'><GrContact /></span> 
                      <span className='text'>Contact</span> 
                   </a>
