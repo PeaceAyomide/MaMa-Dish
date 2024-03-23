@@ -30,36 +30,37 @@ const Navbar = () => {
       <div className="navigation">
           <ul>
               <li className={`list ${activeItem === 'Home' ? 'active' : ''}`}>
-                        <Link to="/" onClick={() => handleClick('Home')}>
-                      <span className='icon'><IoHomeOutline /></span> 
+                        <Link to="/">
+                        <a href="#" onClick={() => handleClick('Home')}>
+                     <span className='icon'><IoHomeOutline /></span> 
                      <span className='text'>Home</span> 
-                  
+                  </a>
                         </Link>
                         
               </li>
               <li className={`list ${activeItem === 'Dishes' ? 'active' : ''}`}>
-                        <Link to="/dishes" onClick={() => handleClick('Dishes')}>
-                        
+                        <Link to="/dishes">
+                        <a href="#" onClick={() => handleClick('Dishes')}>
                      <span className='icon'><GiCookingPot /></span> 
                      <span className='text'>Dishes</span> 
-               
+                  </a>
                         </Link>
                         
               </li>
               <li className={`list ${activeItem === 'About Us' ? 'active' : ''}`}>
-                        <Link to="/about" onClick={() => handleClick('About Us')}>
-                        
+                        <Link to="/about">
+                        <a href="#" onClick={() => handleClick('About Us')}>
                      <span className='icon'><GiCook /></span> 
                      <span className='text'>Review</span> 
-                 
+                  </a>
                         </Link> 
               </li>
               <li className={`list ${activeItem === 'Contact' ? 'active' : ''}`} >
-                        <Link to="/contact" onClick={() => handleClick('Contact')}>
-                      
+                        <Link to="/contact">
+                        <a href="#" onClick={() => handleClick('Contact')}>
                      <span className='icon'><GrContact /></span> 
                      <span className='text'>Contact</span> 
-                  
+                  </a>
                         </Link>
                         
               </li>
