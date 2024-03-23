@@ -52,7 +52,7 @@ const AboutUs = () => {
         spaceBetween={50}
         slidesPerView={slidesPerView}
      className='swiper-container'
-      pagination={{ clickable: true }}
+      
       autoplay={{ delay: 2000 }} // Autoplay every 2 seconds
         
     onSwiper={(swiper) => console.log(swiper)}
