@@ -16,9 +16,19 @@ import Ramzy from '../AboutUs/ramzy.jpg'
 
 import { AiTwotoneStar } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const AboutUs = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true 
+    });
+  }, []);
+
 
   const [slidesPerView, setSlidesPerView] = useState(window.innerWidth <= 600 ? 1 : 2);
 
@@ -36,7 +46,7 @@ const AboutUs = () => {
 
 
   return (
-    <div className='aboutus'>
+    <div className='aboutus' data-aos="fade-up">
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y,  Autoplay]}
         spaceBetween={50}

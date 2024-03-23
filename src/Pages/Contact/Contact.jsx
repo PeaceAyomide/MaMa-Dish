@@ -1,12 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Contact.css'
 import { CiMail } from "react-icons/ci";
 import { MdPhone } from "react-icons/md";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const Contact = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true 
+    });
+  }, []);
+
+
 
   
   return (
-    <div className='contactus'>
+    <div className='contactus' data-aos="fade-up">
       
       <div className="contactwords">
         <h2>Contact <span>Us</span></h2>

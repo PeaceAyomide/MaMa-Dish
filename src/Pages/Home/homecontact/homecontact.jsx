@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './homecontact.css'
 import { FaClock } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const homecontact = () => {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 8000, // animation duration
+       once:true
+        });
+      }, []);
+    
+    
   return (
-      <div>
+      <div data-aos="fade-up">
           <div className="contctbtn">
               <div className="clock">
                   <FaClock className='clockicon'/>
