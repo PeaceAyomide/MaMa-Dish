@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect  } from 'react'
 import './Navbar.css'
 import { IoHomeOutline } from "react-icons/io5";
 import { GiCookingPot } from "react-icons/gi";
@@ -9,8 +9,15 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
 
-    const [activeItem, setActiveItem] = useState('Home'); // State to keep track of the active item
-    const handleClick = (itemName) => {
+    const [activeItem, setActiveItem] = useState(localStorage.getItem('activeItem') || 'Home'); // State to keep track of the active item
+    
+    useEffect(() => {
+      // Store activeTab in localStorage when it changes
+      localStorage.setItem('activeItem', activeItem);
+  }, [activeItem]);
+
+   
+   const handleClick = (itemName) => {
         if (activeItem !== itemName) { // Only update the active item if it's different from the clicked item
           setActiveItem(itemName); // Update the active item based on the clicked item
         }

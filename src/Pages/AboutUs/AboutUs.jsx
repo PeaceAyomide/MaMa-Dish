@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -20,20 +20,34 @@ import { FaStar } from "react-icons/fa";
 
 const AboutUs = () => {
 
-  
+  const [slidesPerView, setSlidesPerView] = useState(window.innerWidth <= 600 ? 1 : 2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesPerView(window.innerWidth <= 680 ? 1 : 2);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); 
+
+
   return (
     <div className='aboutus'>
     <Swiper
     modules={[Navigation, Pagination, Scrollbar, A11y,  Autoplay]}
-    spaceBetween={50}
-      slidesPerView={window.innerWidth <= 600 ? 1 : 2}
-   className='swiper-container'
+        spaceBetween={50}
+        slidesPerView={slidesPerView}
+     className='swiper-container'
       pagination={{ clickable: true }}
-      //  autoplay={{ delay: 2000 }} // Autoplay every 2 seconds
+      autoplay={{ delay: 2000 }} // Autoplay every 2 seconds
         
     onSwiper={(swiper) => console.log(swiper)}
     onSlideChange={() => console.log('slide change')}   >
-      <SwiperSlide><div className="slide1">
+      <SwiperSlide ><div className="slide1">
         <div className="star">
 <FaStar/><FaStar/><FaStar/><FaStar/><AiTwotoneStar/>
 

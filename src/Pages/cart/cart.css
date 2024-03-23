@@ -46,6 +46,12 @@ z-index: 9999;
     transform: scale(1.1);
 }
 
+.cart-items-empty{
+    text-align: center;
+    color: brown;
+    
+}
+
 @media only screen and (max-width: 1010px)
 {
     .cartdisplay{

@@ -1,0 +1,112 @@
+.contactus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 6rem;
+    background-color: #e5e5e5;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contactwords{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+.contactwords span{
+    color: orange;
+}
+
+
+.contactwords p{
+    width: 15rem;
+    word-wrap: break-word;
+}
+
+.contactbox{
+    display: flex;
+    flex-direction: column;
+gap: 1rem;
+background-color: white;
+padding-top: 0.9rem;
+padding-bottom: 0.9rem;
+padding-left: 0.9rem;
+padding-right: 0.9rem;
+border-radius: 1em;
+
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input .name, .email1{
+    height: 2.8em;
+    padding-left: 0.3rem;
+    border-radius: 0.6rem;
+    border: 1px solid ;
+    font-size: 0.7rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+.input .name:hover,
+.input .email1:hover {
+    border: 1px solid orange;
+}
+.input .message{
+    padding-top: 0.3rem;
+    padding-left: 0.3rem;
+    border-radius: 0.6rem;
+    border: 1px solid ;
+    font-size: 0.7rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input .message:hover{
+    border: 1px solid orange;
+}
+
+.contactbtn{
+    height: 2rem;
+    width: 7rem;
+    border-radius: 0.4rem;
+    background-color: orange;
+    color: white;
+    border: 0px ;
+    transition: 0.3s ease-in-out;
+
+}
+
+.contactbtn:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+    border: 1px solid;
+}
+
+@media only screen and (max-width: 900px) {
+    .contactus{
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contactus{
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+.contactus{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 9rem;
+    font-size: 0.9rem;
+}
+
+}

@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Dishes from './Pages/Dish/Dishes';
 import AboutUs from './Pages/AboutUs/AboutUs';
-import Contact from './Pages/Contact';
+import Contact from './Pages/Contact/Contact';
 import Cart from './Pages/cart/cart';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import data from './Pages/Dish/data';

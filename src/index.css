@@ -6,3 +6,7 @@
     font-family: 'Poppins', sans-serif;
 
 }
+::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar width */
+    height: 0; /* Hide scrollbar height */
+}
