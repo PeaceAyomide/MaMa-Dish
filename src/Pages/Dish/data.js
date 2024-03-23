@@ -1,40 +1,48 @@
+import HarmBurgerImage from '../Dish/foodimg/HarmBurger.png';
+import CheesePizzaImage from '../Dish/foodimg/Cheese Pizza.png';
+import FriesChipsImage from '../Dish/foodimg/Fries Chips.png';
+import MeatGrillsImage from '../Dish/foodimg/Meat Grills.png';
+import JapaneseCuisineImage from '../Dish/foodimg/Japanese Cuisine.png';
+import SandwichImage from '../Dish/foodimg/SandWich.png';
+
+
 const data = {
    foodItems: [
         {
             id: "1",
             name: "Veggie Burger",
             price: 15000,
-            image: "/src/Pages/Dish/foodimg/HarmBurger.png"
+            image: HarmBurgerImage
         },
         {
             id: "2",
             name: "Pizza Cheese",
             price: 25000,
-            image: "/src/Pages/Dish/foodimg/Cheese Pizza.png"
+            image: CheesePizzaImage
         },
         {
             id: "3",
             name: "Potato Fries",
             price: 8000,
-            image: "/src/Pages/Dish/foodimg/Fries Chips.png"
+            image: FriesChipsImage
         },
         {
             id: "4",
             name: "Berbecue grill",
             price: 30000,
-            image: "/src/Pages/Dish/foodimg/Meat Grills.png"
+            image: MeatGrillsImage
         },
         {
-            id: "5",
+          id: "5",
             name: "Japanese Cuisine",
             price: 76000,
-            image: "/src/Pages/Dish/foodimg/Japanese Cuisine.png"
+            image:  JapaneseCuisineImage
         },
         {
             id: "6",
             name: "SandWich",
             price: 9000,
-            image: "/src/Pages/Dish/foodimg/SandWich.png"
+            image: SandwichImage
         }
     ]
 };
