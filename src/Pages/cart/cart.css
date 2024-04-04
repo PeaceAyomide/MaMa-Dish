@@ -20,7 +20,7 @@ z-index: 9999;
     width: 50rem;
     border-radius: 1rem;
   overflow-y: auto;
-    
+   
 }
 .cartdisplay-heading{
     display: flex;
@@ -228,6 +228,22 @@ cursor: pointer;
     
 }
 
+
+@media only screen and (max-width: 1000px){
+
+    .cartdisplay2{
+     margin-top: 32rem;  
+     height: 23rem;
+    }
+
+}
+
+@media only screen and (max-width: 930px){
+.cartdisplay2{
+    margin-top: 0;
+   }
+
+}
 
 @media only screen and (max-width: 400px){
     .cartdisplay{
